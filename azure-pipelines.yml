@@ -16,8 +16,8 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use .NET Core SDK 3.1.300'
-  inputs:
+ displayName: 'Use .NET Core SDK 3.1.300'
+ inputs:
     packageType: sdk
     version: 3.1.300
 
@@ -30,7 +30,7 @@ steps:
   displayName: 'Compile Sass assets'
 
 - task: gulp@1
-displayName: 'Run gulp tasks'
+  displayName: 'Run gulp tasks'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
   displayName: 'Write build info'
